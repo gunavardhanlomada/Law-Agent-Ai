@@ -11,7 +11,7 @@
   <h3>2. Clone the Repository</h3>
   <pre>
 git clone https://github.com/gunavardhanlomada/Law-Agent-Ai.git
-cd Volunteer-Verse
+cd Law-Agent-Ai
   </pre>
 
   <h3>3. Install Dependencies</h3>
@@ -24,7 +24,7 @@ npm install
 
   <h3>4. Start the Application</h3>
   <pre>
-npm start      # Start the server
+npm start
   </pre>
 
   <h2>Note</h2>
