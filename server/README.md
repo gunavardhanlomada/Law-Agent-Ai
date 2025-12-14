@@ -3,7 +3,7 @@
 <h3>Clone Repository</h3>
 <pre>
 git clone https://github.com/gunavardhanlomada/Law-Agent-Ai.git
-cd indian-legal-ai-agent
+cd Law-Agent-Ai
 </pre>
 
 <h3>Install Dependencies</h3>
