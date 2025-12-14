@@ -30,17 +30,19 @@ and <b>academic legal research</b> with <b>official citations and sources</b>.
 <h2>🏗️ System Architecture</h2>
 
 <h3>High-Level Architecture</h3>
-
+<img src="https://raw.githubusercontent.com/gunavardhanlomada/Law-Agent-Ai/refs/heads/main/client/public/High-Level%20System%20Architecture%20(End-to-End).png" alt ="High-Level Architecture">
 
 <hr/>
 
 <h2>🧠 RAG (Retrieval-Augmented Generation) Flow</h2>
 
-
+<img src="https://raw.githubusercontent.com/gunavardhanlomada/Law-Agent-Ai/refs/heads/main/client/public/RAG%20(Retrieval-Augmented%20Generation)%20Flow.png" alt ="RAG (Retrieval-Augmented Generation) Flow">
 
 <hr/>
 
 <h2>🤖 Multi-Agent Architecture</h2>
+<img src="https://raw.githubusercontent.com/gunavardhanlomada/Law-Agent-Ai/refs/heads/main/client/public/Multi-Agent%20Reasoning.png" alt ="Multi-Agent Architecture">
+
 <ul>
   <li><b>Legal Research Agent</b> – Statutes, IPC, case laws</li>
   <li><b>Lawyer Agent</b> – Issue analysis, arguments, defenses</li>
