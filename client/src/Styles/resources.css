@@ -1,0 +1,310 @@
+/* Prevent body scroll */
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* Page Background */
+.page {
+  background: #0a0a0f;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed; /* Fix background */
+  color: white;
+  text-align: center;   
+  animation: fadeUp 1s ease forwards;
+  height: 100vh;
+  overflow-y: auto; /* Scroll only inside page */
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+/* Titles */
+.page-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  animation: fadeUp 1s ease forwards;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin: 30px 0 30px;
+  margin-left: 160px;
+  text-align: left;
+  color: #22d3ee;
+  font-weight: 700;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Guides Grid */
+.guides-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Guide Card Styles */
+.guide-card {
+  background: #1f2937;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: left;
+  transition: all 0.4s ease;
+  font-size: 1.1rem;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.guide-card:hover {
+  background: #2a3647;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(34, 211, 238, 0.3);
+}
+
+/* Guide Icon */
+/* Guide Icon with Static Background Shadow */
+.guide-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: rgba(34, 211, 238, 0.15); /* Soft background color */
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.35); /* Static shadow */
+}
+
+
+.guide-card:hover .guide-icon {
+  transform: scale(1.1);
+}
+
+/* Guide Text */
+.guide-title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.guide-description {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 16px;
+}
+
+.guide-link {
+  color: #22d3ee;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.guide-link:hover {
+  text-decoration: underline;
+  color: #38bdf8;
+}
+
+/* FAQ Section */
+.faq-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  transition: all 0.3s ease;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* FAQ Item */
+.faq-item {
+  background: #1f2937;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.faq-item:hover {
+  background: #2a3647;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(34, 211, 238, 0.4);
+}
+
+/* FAQ Question */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  text-align: left;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* FAQ Answer */
+.faq-answer {
+  padding: 0 25px 22px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* Page Load Animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Scroll Animations for Guides */
+.guides-container .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.guides-container .fade-in:nth-child(2) { transition-delay: 0.2s; }
+.guides-container .fade-in:nth-child(3) { transition-delay: 0.3s; }
+.guides-container .fade-in:nth-child(4) { transition-delay: 0.4s; }
+.guides-container .fade-in:nth-child(5) { transition-delay: 0.5s; }
+
+/* Staggered Scroll Animations for FAQs */
+.faq-container .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.faq-container .fade-in:nth-child(2) { transition-delay: 0.2s; }
+.faq-container .fade-in:nth-child(3) { transition-delay: 0.3s; }
+.faq-container .fade-in:nth-child(4) { transition-delay: 0.4s; }
+.faq-container .fade-in:nth-child(5) { transition-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page {
+    padding: 60px 20px;
+  }
+
+  .page-title {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+  }
+
+  .guides-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 50px 15px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+  }
+
+  .guides-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .guide-card {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .guide-title {
+    font-size: 1.3rem;
+  }
+
+  .faq-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    padding: 0 20px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 40px 10px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .guide-card {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .guide-title {
+    font-size: 1.1rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    padding: 0 15px 15px;
+  }
+}

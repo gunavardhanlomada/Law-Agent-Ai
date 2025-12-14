@@ -1,0 +1,213 @@
+/* === Global Page Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #0f172a; /* dark navy */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+  text-shadow: 0 0 10px #9333ea, 0 0 20px #7dd3fc;
+}
+
+/* === Layout === */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fly-in animations */
+.fly-in-left {
+  animation: flyInLeft 0.8s ease forwards;
+}
+.fly-in-right {
+  animation: flyInRight 0.8s ease forwards;
+}
+@keyframes flyInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes flyInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* === Headings === */
+.card-heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #06b6d4; /* cyan */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Form Fields === */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c084fc; /* purple */
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 95%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: #1e293b;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+  min-height: 120px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #a78bfa;
+}
+
+/* === File Upload === */
+.upload-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #38bdf8; /* cyan */
+  margin-bottom: 6px;
+  display: block;
+}
+
+.upload-box {
+  border: 2px dashed #8b5cf6; /* purple */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(30, 41, 59, 0.6);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+.upload-box:hover {
+  border-color: #a78bfa;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 10px;
+  padding-left: 16px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* === Buttons === */
+.btn-generate {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #8b5cf6, #06b6d4);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #8b5cf6, 0 0 20px #06b6d4;
+}
+
+.btn-export {
+  background: #10b981; /* green */
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-export:hover {
+  background: #34d399;
+}
+
+/* === Output Box === */
+.output-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #cbd5e1;
+  min-height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
